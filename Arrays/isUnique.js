@@ -33,13 +33,13 @@ function isUniqueWithoutStructure (input) {
 }
 
 function isUnique() {
-    console.log("-With additional structure-")
+    console.log("-With additional structure-");
     console.log(isUniqueWithStructure(""));
     console.log(isUniqueWithStructure("abcdefg"));
     console.log(isUniqueWithStructure("abdcab"));
     console.log(isUniqueWithStructure("abbac"));
 
-    console.log("-Without additional structure-")
+    console.log("-Without additional structure-");
     console.log(isUniqueWithoutStructure(""));
     console.log(isUniqueWithoutStructure("abcdefg"));
     console.log(isUniqueWithoutStructure("abdcab"));
