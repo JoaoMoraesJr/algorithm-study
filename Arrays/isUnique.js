@@ -1,4 +1,4 @@
-//Description: Determine if a string has all unique characters. What if you cannot use additional data structures?
+//Cracking the code: Determine if a string has all unique characters. What if you cannot use additional data structures?
 
 //With additional structure:
 //Using dictionary
