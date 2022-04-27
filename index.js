@@ -1,3 +1,4 @@
+//Use "node index.js" to run
 const { isUnique } = require('./Arrays/isUnique')
 const { RemoveNthNode } = require('./Lists/RemoveNthNode')
 
