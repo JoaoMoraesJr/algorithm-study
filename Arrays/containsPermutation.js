@@ -38,4 +38,35 @@ var checkInclusion = function (s1, s2) {
     return false;
 }
 
+
+//Using arrays
+//Time complexity: O (s1 + s1 * s2) = O(s1 * s2)
+//Space Complexity: O(s1)
+var checkInclusionArray = function (s1, s2) {
+    function checkPermutation () {
+        for (let i = 0; i <= arr1.length; i++) {
+            if (arr1[i] != arr2[i]) return false
+        }
+        return true
+    }
+
+	let arr1 = new Array(26).fill(0);
+    let arr2 = new Array(26).fill(0);
+
+	if (s1.length > s2.length) return false;
+	for (let i = 0; i < s1.length; i++) {
+		arr1[s1.charCodeAt(i) - 97]++;
+        arr2[s2.charCodeAt(i) - 97]++;
+	}
+	for (let i = 0; i <= s2.length - s1.length; i++) {
+        if(checkPermutation()) return true;
+        arr2[s2.charCodeAt(i)-97]--;
+        arr2[s2.charCodeAt(i+s1.length)-97]++;
+	}
+    return false;
+}
+
+
+
 console.log (checkInclusion('ac', 'abca'));
+console.log (checkInclusionArray('ao', 'eidbaooo'));
