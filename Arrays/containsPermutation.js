@@ -3,7 +3,7 @@
 
 
 //Time complexity: O (s1 + s1 * s2) = O(s1 * s2)
-//Space Complexity: O(s1)
+//Space Complexity: O(1) - Limited characters numbers
 var checkInclusion = function (s1, s2) {
 	function verifyPermutationWindow (hash, position) {
         hashLength = Object.values(hash).reduce((a, b) => a + b, 0);
@@ -41,7 +41,7 @@ var checkInclusion = function (s1, s2) {
 
 //Using arrays
 //Time complexity: O (s1 + s1 * s2) = O(s1 * s2)
-//Space Complexity: O(s1)
+//Space Complexity: O(1)
 var checkInclusionArray = function (s1, s2) {
     function checkPermutation () {
         for (let i = 0; i <= arr1.length; i++) {
