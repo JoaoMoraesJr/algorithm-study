@@ -32,27 +32,22 @@ print("\nLists:")
 list_example = [3, 1, 4, 2]
 print("Original:", list_example)
 
-# In‑place ascending sort
 list_example.sort()
 print("Sorted ascending (in‑place):", list_example)
 
-# In‑place descending sort
 list_example.sort(reverse=True)
 print("Sorted descending (in‑place):", list_example)
 
-# Using sorted() to keep original intact
 nums = [10, -5, 7, 3]
 print("Original nums:", nums)
 print("sorted(nums):", sorted(nums))  # ascending copy
 print("nums after sorted():", nums)   # unchanged
 
-# Custom key – sort strings by length
 words = ["apple", "fig", "banana", "kiwi"]
-print("Words sorted by length:", sorted(words, key=len))
+print("Words sorted by length:", sorted(words, key=len)) #sort by string len
 
-# Sorting list of dicts by a field
 records = [{"value": 5, "name": "test1"}, {"value": 6, "name": "test2"}, {"value": 1, "name": "alpha"}]
-print("Sorted records by 'value':", sorted(records, key=lambda x: x["value"]))
+print("Sorted records by 'value':", sorted(records, key=lambda x: x["value"])) #sort by field
 
 # Sorting list of objects by attribute
 class Item:
@@ -91,6 +86,8 @@ print("Union:", set_a | set_b)
 print("Intersection:", set_a & set_b)
 print("Difference:", set_a - set_b)
 print("Is subset?", {1, 2} <= set_a)
+set_a.remove(1)
+print("Set after removal", set_a)
 
 # Queues (FIFO)
 print("\nQueues:")
@@ -229,3 +226,10 @@ class Square(Shape):
 
 sq = Square(4)
 print(sq.area())
+
+#Tuples
+print("\nTuples:")
+visitedPosition = []
+visitedPosition.append((1, 2))
+if (1, 2) in visitedPosition:
+    print('(1, 2) found in ', visitedPosition)
