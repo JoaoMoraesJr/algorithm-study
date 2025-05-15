@@ -1,0 +1,12 @@
+.asset-card {
+    background-color: #7eb7f7;
+    display: flex;
+    margin: 20px;
+    width: fit-content; 
+    padding: 5px;
+}
+
+.asset-text {
+    display: 'flex';
+    align-content: 'center';
+}
