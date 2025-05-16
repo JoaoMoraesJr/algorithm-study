@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
 import './App.css'
 
+function Asset({keyName, value, onAdd}) {
+    return (
+    <div className="asset-card">
+        <div className="asset-text">{keyName.charAt(0).toUpperCase() + keyName.slice(1)}: {value.usd}</div>
+        <button style={{marginLeft: 5}} onClick={() => onAdd(keyName, value)}>+</button>
+    </div>
+    );
+}
+
 function App() {
     
     const [data, setData] = useState(null);
@@ -51,10 +60,7 @@ function App() {
         <div>
             <h1>Assets</h1>
             {Object.entries(data).map(([key, value]) => (
-                <div key={key} className="asset-card">
-                    <div className="asset-text">{key.charAt(0).toUpperCase() + key.slice(1)}: {value.usd}</div>
-                    <button style={{marginLeft: 5}} onClick={() => handleAddToWallet(key, value)}>+</button>
-                </div>
+                <Asset key={key} keyName={key} value={value} onAdd={handleAddToWallet} />
             ))}
             <h1>Wallet</h1>
             {Object.entries(wallet).map(([key, value]) => (
